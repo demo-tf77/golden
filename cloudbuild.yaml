@@ -1,0 +1,6 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['compute', 'images', 'create', 'my-image', '--source-image', 'source-image', '--family', 'my-family']
+
+images:
+- 'gcr.io/universal-chain-410006/my-image'
