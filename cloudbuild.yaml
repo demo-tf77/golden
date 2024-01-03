@@ -1,6 +1,3 @@
 steps:
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['compute', 'images', 'create', 'my-image', '--source-image', 'source-image', '--family', 'my-family']
-
-images:
-- 'gcr.io/universal-chain-410006/my-image'
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/my-image', '.']
